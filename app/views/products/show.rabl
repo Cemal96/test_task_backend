@@ -1,4 +1,4 @@
-object @post
+object @product
 attributes :id, :name
 child :offers do
   attributes :price, :store_id
