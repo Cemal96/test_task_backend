@@ -1,4 +1,4 @@
-class Price < ApplicationRecord
+class Offer < ApplicationRecord
   belongs_to :product
   belongs_to :store
 end

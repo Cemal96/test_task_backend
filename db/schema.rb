@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161105094014) do
+ActiveRecord::Schema.define(version: 20161105095938) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -18,14 +18,14 @@ ActiveRecord::Schema.define(version: 20161105094014) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "prices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "offers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "product_id"
     t.integer  "store_id"
     t.decimal  "price",      precision: 8, scale: 2
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
-    t.index ["product_id"], name: "index_prices_on_product_id", using: :btree
-    t.index ["store_id"], name: "index_prices_on_store_id", using: :btree
+    t.index ["product_id"], name: "index_offers_on_product_id", using: :btree
+    t.index ["store_id"], name: "index_offers_on_store_id", using: :btree
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20161105094014) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "prices", "products"
-  add_foreign_key "prices", "stores"
+  add_foreign_key "offers", "products"
+  add_foreign_key "offers", "stores"
   add_foreign_key "products", "categories"
 end
