@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  has_many :prices
-  has_many :stores, through: :prices
+  has_many :offers
+  has_many :stores, through: :offers
   belongs_to :category
 end
