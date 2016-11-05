@@ -1,8 +1,8 @@
 object @post
 attributes :id, :name
 child :offers do
-  attributes :price
+  attributes :price, :store_id
 end
 child :stores do
-  attributes :name
+  attributes :id, :name
 end
