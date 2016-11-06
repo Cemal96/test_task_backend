@@ -1,5 +1,5 @@
 object @product
-attributes :id, :name
+attributes :id, :name, :description
 child :offers do
   attributes :price
 end

@@ -1,6 +1,6 @@
 object false
 child(@products) do
-  attributes :id, :name
+  attributes :id, :name, :description
   child :offers do
     attributes :price
   end
