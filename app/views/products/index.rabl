@@ -5,7 +5,7 @@ child(@products) do
     attributes :price
   end
   child :stores do
-    attributes :name,
+    attributes :name
   end
 end
 node(:max_price) { |m| Offer.maximum(:price) }
