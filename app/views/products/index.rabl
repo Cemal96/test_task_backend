@@ -1,2 +1,5 @@
 collection @products
-extends 'products/show'
+attributes :id, :name
+child :offers do
+  attributes :price
+end
